@@ -24,7 +24,7 @@ class Astoundify_Job_Manager_Apply_CF7 {
 	/**
 	 * @var $jobs_form_id
 	 */
-	private $jos_form_id;
+	private $jobs_form_id;
 
 	/**
 	 * @var $resumes_form_id
