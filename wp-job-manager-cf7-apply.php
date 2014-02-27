@@ -48,8 +48,8 @@ class Astoundify_Job_Manager_Apply_CF7 {
 	 * @since WP Job Manager - Apply with Contact Form 7 1.0
 	 */
 	public function __construct() {
-		$this->jobs_form_id    = get_option( 'job_manager_cf7'        , 0 );
-		$this->resumes_form_id = get_option( 'job_manager_cf7_resumes', 0 );
+		$this->jobs_form_id    = get_option( 'job_manager_job_apply'   , 0 );
+		$this->resumes_form_id = get_option( 'job_manager_resumes_apply', 0 );
 
 		$this->setup_actions();
 		$this->setup_globals();
@@ -67,11 +67,11 @@ class Astoundify_Job_Manager_Apply_CF7 {
 	private function setup_globals() {
 		$this->file       = __FILE__;
 
-		$this->basename   = apply_filters( 'job_manager_cf7_apply_plugin_basenname', plugin_basename( $this->file ) );
-		$this->plugin_dir = apply_filters( 'job_manager_cf7_apply_plugin_dir_path' , plugin_dir_path( $this->file ) );
-		$this->plugin_url = apply_filters( 'job_manager_cf7_apply_plugin_dir_url  ', plugin_dir_url ( $this->file ) );
+		$this->basename   = plugin_basename( $this->file );
+		$this->plugin_dir = plugin_dir_path( $this->file );
+		$this->plugin_url = plugin_dir_url ( $this->file );
 
-		$this->lang_dir   = apply_filters( 'job_manager_cf7_apply_lang_dir', trailingslashit( $this->plugin_dir . 'languages' ) );
+		$this->lang_dir   = trailingslashit( $this->plugin_dir . 'languages' );
 		$this->domain     = 'job_manager_cf7_apply';
 	}
 
@@ -118,7 +118,7 @@ class Astoundify_Job_Manager_Apply_CF7 {
 	 */
 	public function job_manager_settings( $settings ) {
 		$settings[ 'job_listings' ][1][] = array(
-			'name'    => 'job_manager_cf7',
+			'name'    => 'job_manager_job_apply',
 			'std'     => null,
 			'type'    => 'select',
 			'options' => self::get_forms(),
@@ -128,7 +128,7 @@ class Astoundify_Job_Manager_Apply_CF7 {
 
 		if ( class_exists( 'WP_Resume_Manager' ) ) {
 			$settings[ 'job_listings' ][1][] = array(
-				'name'  => 'job_manager_cf7_resumes',
+				'name'  => 'job_manager_resumes_apply',
 				'std'   => null,
 				'type'    => 'select',
 				'options' => self::get_forms(),
@@ -141,13 +141,12 @@ class Astoundify_Job_Manager_Apply_CF7 {
 	}
 
 	private static function get_forms() {
-
 		$forms = array( 0 => __( 'Please select a form', 'job_manager_cf7_apply' ) );
 
 		$_forms = get_posts(
 			array(
 				'numberposts' => -1,
-				'post_type' => 'wpcf7_contact_form',
+				'post_type'   => 'wpcf7_contact_form',
 			)
 		);
 
@@ -169,7 +168,6 @@ class Astoundify_Job_Manager_Apply_CF7 {
 	 * @return string The email to notify.
 	 */
 	public function notification_email( $components, $cf7 ) {
-
 		if ( ! is_singular( array( 'resume', 'job_listing' ) ) ) {
 			return $components;
 		}
@@ -180,7 +178,7 @@ class Astoundify_Job_Manager_Apply_CF7 {
 
 		global $post;
 
-		$components['recipient'] = $cf7->ID == $this->jobs_form_id ? $post->_application : $post->_candidate_email;
+		$components[ 'recipient' ] = $cf7->ID == $this->jobs_form_id ? $post->_application : $post->_candidate_email;
 
 		return $components;
 	}
