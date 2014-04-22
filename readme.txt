@@ -1,21 +1,21 @@
-=== Apply with Gravity Forms for WP Job Manager ===
+=== Apply with Contact Form 7 for WP Job Manager ===
 
 Author URI: http://astoundify.com
 Plugin URI: https://github.com/Astoundify/wp-job-manager-gravityforms-apply/
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=contact@appthemer.com&item_name=Donation+for+Astoundify WP Job Manager Gravity Forms
 Contributors: spencerfinnell
-Tags: job, job listing, job apply, gravity forms, wp job manager
+Tags: job, job listing, job apply, contact form 7, wp job manager
 Requires at least: 3.5
 Tested up to: 3.8
 Stable Tag: 1.1.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Allow themes using the WP Job Manager plugin to apply via a defined Gravity Form.
+Allow themes using the WP Job Manager plugin to apply via a defined Contact Form 7.
 
 == Description ==
 
-Allow themes using the WP Job Manager plugin to apply via a defined Gravity Form.
+Allow themes using the WP Job Manager plugin to apply via a defined Contact Form 7.
 
 = Where can I use this? =
 
@@ -23,7 +23,7 @@ Astoundify has released the first fully integrated WP Job Manager theme. Check o
 
 == Frequently Asked Questions ==
 
-= Nothing happens when I set the Gravity Form ID? =
+= Nothing happens when I set the Contact Form 7 ID? =
 
 It is up to the theme to respect your choice to use this plugin (as there is no way to automatically insert the form). The theme you are using must add:
 
@@ -36,20 +36,6 @@ It is up to the theme to respect your choice to use this plugin (as there is no 
 2. Go to "Job Listings > Settings" and enter the ID of the form you would like to use.
 
 == Changelog ==
-
-= 1.1.2: February 1, 2014 =
-
-* Fix: Properly return variable on filter.
-* Fix: Typo fix for sending job emails.
-
-= 1.1.1: January 26, 2014 =
-
-* Fix: Make sure resume contact submissions are going to the correct place.
-* Fix: Avoid conflict with Gravity Forms when submitting a resume.
-
-= 1.1: January 20, 2014 =
-
-* New: Add support for a Resume Contact form when using Resume Manager
 
 = 1.0: August 14, 2013 =
 
