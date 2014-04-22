@@ -11,11 +11,11 @@ Stable Tag: 1.1.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Allow themes using the WP Job Manager plugin to apply via a defined Contact Form 7.
+Allow themes using the WP Job Manager plugin to apply via a defined Contact Form 7 form.
 
 == Description ==
 
-Allow themes using the WP Job Manager plugin to apply via a defined Contact Form 7.
+Allow themes using the WP Job Manager plugin to apply via a defined Contact Form 7 form.
 
 = Where can I use this? =
 
