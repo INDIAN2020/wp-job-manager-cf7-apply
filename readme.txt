@@ -1,8 +1,8 @@
 === Apply with Contact Form 7 for WP Job Manager ===
 
 Author URI: http://astoundify.com
-Plugin URI: https://github.com/Astoundify/wp-job-manager-gravityforms-apply/
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=contact@appthemer.com&item_name=Donation+for+Astoundify WP Job Manager Gravity Forms
+Plugin URI:https://wordpress.org/plugins/wp-job-manager-contact-form-7-apply/
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=contact@appthemer.com&item_name=Donation+for+Astoundify WP Job Manager Contact Forms 7
 Contributors: spencerfinnell
 Tags: job, job listing, job apply, contact form 7, wp job manager
 Requires at least: 3.5
