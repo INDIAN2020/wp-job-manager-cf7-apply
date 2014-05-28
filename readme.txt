@@ -37,6 +37,6 @@ It is up to the theme to respect your choice to use this plugin (as there is no 
 
 == Changelog ==
 
-= 1.0: August 14, 2013 =
+= 1.0: May 28, 2014 =
 
 * First official release!
