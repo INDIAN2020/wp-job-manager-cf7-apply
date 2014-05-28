@@ -3,7 +3,7 @@
  * Plugin Name: WP Job Manager - Apply With Contact Form 7
  * Plugin URI:  https://github.com/Astoundify/wp-job-manager-contact-form-7-apply/
  * Description: Apply to jobs that have added an email address via Contact Form 7
- * Author:      Astoundify, JustinSainton
+ * Author:      Astoundify, SpencerFinnell
  * Author URI:  http://astoundify.com
  * Version:     1.1.1
  * Text Domain: job_manager_cf7_apply
